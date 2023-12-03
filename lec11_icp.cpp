@@ -61,7 +61,7 @@ int main(int argc, char**argv) {
      */
     pcl::PointCloud<pcl::PointXYZ>::Ptr src(new pcl::PointCloud<pcl::PointXYZ>);
     pcl::PointCloud<pcl::PointXYZ>::Ptr tgt(new pcl::PointCloud<pcl::PointXYZ>);
-    *src = *load_bin("/home/shapelim/catkin_ws/src/pcl_tutorial/materials/kitti00_000000.bin");
+    *src = *load_bin("/home/chae/2024/pcl_tutorial/materials/kitti00_000000.bin");
 
     /** Test를 위해 앞으로 2m 전진시킨 target을 만듦 */
     Eigen::Matrix4f tf;
@@ -108,6 +108,8 @@ int main(int argc, char**argv) {
     viewer.showCloud(tgt_colored, "tgt_viz");
     viewer.showCloud(align_colored, "align_viz");
 
+    // 수렴하면 hasConverged true return
+    std::cout << "converge?" << bool(is_converged) << std::endl;
     int cnt = 0;
     while (!viewer.wasStopped()) {
         //you can also do cool processing here

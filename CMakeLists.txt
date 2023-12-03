@@ -4,17 +4,18 @@ project(pcl_tutorial)
 
 set(CMAKE_CXX_STANDARD 17)
 
-find_package(catkin REQUIRED COMPONENTS
-        roscpp
-        rospy
-        std_msgs
-        geometry_msgs
-        message_generation
-        sensor_msgs
-        pcl_ros)
+#find_package(catkin REQUIRED COMPONENTS
+#        roscpp
+#        rospy
+#        std_msgs
+#        geometry_msgs
+#        message_generation
+#        sensor_msgs
+#        pcl_ros)
 
-find_package(Boost 1.58 REQUIRED)
-find_package(PCL 1.8 REQUIRED)
+#find_package(Boost 1.58 REQUIRED)
+#find_package(PCL 1.10.0 REQUIRED)
+find_package(PCL REQUIRED HINTS ~/install_thirdparty/pcl-pcl-1.13.1/install/share/pcl-1.13/PCLConfig.cmake)
 
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})

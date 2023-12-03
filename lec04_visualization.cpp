@@ -60,7 +60,7 @@ int main(int argc, char**argv) {
      */
     pcl::PointCloud<pcl::PointXYZ>::Ptr src(new pcl::PointCloud<pcl::PointXYZ>);
     pcl::PointCloud<pcl::PointXYZ>::Ptr tgt(new pcl::PointCloud<pcl::PointXYZ>);
-    *src = *load_bin("/home/shapelim/git/pcl_tutorial/materials/kitti00_000000.bin");
+    *src = *load_bin("/home/chae/2024/pcl_tutorial/materials/kitti00_000000.bin");
 
     Eigen::Matrix4f tf;
     tf << 1, 0, 0, 5.0,
