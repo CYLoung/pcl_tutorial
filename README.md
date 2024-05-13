@@ -1,7 +1,7 @@
 # ROS PCL Tutorial (한글.ver)
 
-Original author: Hyungtae Lim (shapelim@kaist.ac.kr) <br>
-
+- Original author: Hyungtae Lim (shapelim@kaist.ac.kr) <br>
+- [Reference git](https://github.com/LimHyungTae/pcl_tutorial)
 ---
 
 ## PCL tutorial 코드의 유지보수를 위한 repository
